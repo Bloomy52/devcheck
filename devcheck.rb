@@ -5,9 +5,21 @@
 
 # frozen_string_literal: true
 
-load ".devcheck.rb"
+# Define Global Variables
+$failures = 0
+$commands = []
+$files = []
 
 # Define Functions
+def command(name)
+  $commands << name
+end
+
+def file(name)
+  $files << name
+end
+
+
 def command_exists?(cmd)
   # On Windows, use 'where', on Unix-like systems use 'which'
   checker = Gem.win_platform? ? 'where' : 'which'
@@ -22,6 +34,7 @@ def command_exists?(cmd)
   end
 end
 
+
 def file_exists?(file)
   if File.exist?(file)
     puts "✓ #{file}"
@@ -31,37 +44,28 @@ def file_exists?(file)
   end
 end
 
-def command(name)
-  $commands << name
-end
 
-def file(name)
-  $files << name
-end
+load ".devcheck.rb"
 
 if __FILE__ == $0
-  $failures = 0
-  $commands = []
-  $files = []
-
   puts "devcheck"
   puts "Checking Development Environment"
   puts ""
 
-  if commands.empty?
+  if $commands.empty?
     puts "No Commands Specified."
   else
-    commands.each do |cmd|
+    $commands.each do |cmd|
       command_exists?(cmd)
     end
   end
 
   puts ""
 
-  if files.empty?
+  if $files.empty?
     puts "No Files Specified."
   else
-    files.each do |file|
+    $files.each do |file|
       file_exists?(file)
     end
   end
