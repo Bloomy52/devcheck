@@ -31,8 +31,18 @@ def file_exists?(file)
   end
 end
 
+def command(name)
+  $commands << name
+end
+
+def file(name)
+  $files << name
+end
+
 if __FILE__ == $0
   $failures = 0
+  $commands = []
+  $files = []
 
   puts "devcheck"
   puts "Checking Development Environment"
