@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # devcheck.rb
 # devcheck
 # Copyright (c) 2026 Louie Bloomberg.
