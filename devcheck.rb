@@ -37,7 +37,7 @@ if __FILE__ == $0
   puts ""
 
   commands = %w[ruby irb git]
-  if commands.any? == nil
+  if commands.empty?
     puts "No Commands Specified."
   else
     commands.each do |cmd|
@@ -48,13 +48,13 @@ if __FILE__ == $0
   puts ""
 
   files = %w[LICENSE README.md devcheck.rb]
-    if files.any? == nil
-      puts "No Files Specified."
-    else
-      files.each do |file|
-        file_exists?(file)
-      end
+  if files.empty?
+    puts "No Files Specified."
+  else
+    files.each do |file|
+      file_exists?(file)
     end
+  end
 
   puts ""
 
