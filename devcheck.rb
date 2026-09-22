@@ -44,8 +44,12 @@ def file_exists?(file)
   end
 end
 
-
-load ".devcheck.rb"
+begin
+  load ".devcheck.rb"
+rescue LoadError
+  puts "No .devcheck.rb file found"
+  exit 1
+end
 
 if __FILE__ == $0
   puts "devcheck"
