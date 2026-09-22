@@ -5,6 +5,8 @@
 
 # frozen_string_literal: true
 
+load ".devcheck.rb"
+
 # Define Functions
 def command_exists?(cmd)
   # On Windows, use 'where', on Unix-like systems use 'which'
@@ -36,7 +38,6 @@ if __FILE__ == $0
   puts "Checking Development Environment"
   puts ""
 
-  commands = %w[ruby irb git]
   if commands.empty?
     puts "No Commands Specified."
   else
@@ -47,7 +48,6 @@ if __FILE__ == $0
 
   puts ""
 
-  files = %w[LICENSE README.md devcheck.rb]
   if files.empty?
     puts "No Files Specified."
   else
