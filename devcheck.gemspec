@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |spec|
   spec.name        = "devcheck"
-  spec.version     = "0.1.7"
+  spec.version     = "0.1.8"
   spec.summary     = "Check a project's development environment"
   spec.authors     = ["Louie Bloomberg"]
   spec.license     = "MIT"
