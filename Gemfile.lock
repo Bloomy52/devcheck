@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    devcheck (0.2.0)
+    devcheck (0.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -17,7 +17,7 @@ DEPENDENCIES
   rake
 
 CHECKSUMS
-  devcheck (0.2.0)
+  devcheck (0.2.1)
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
 
 BUNDLED WITH
