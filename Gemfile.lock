@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    devcheck (0.1.6)
+    devcheck (0.1.7)
 
 GEM
   remote: https://rubygems.org/
@@ -15,7 +15,7 @@ DEPENDENCIES
   devcheck!
 
 CHECKSUMS
-  devcheck (0.1.6)
+  devcheck (0.1.7)
 
 BUNDLED WITH
   4.0.20
