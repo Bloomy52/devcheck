@@ -10,6 +10,7 @@
 command "ruby"
 command "irb"
 command "git"
+command "gem"
 
 file "LICENSE"
 file "README.md"
