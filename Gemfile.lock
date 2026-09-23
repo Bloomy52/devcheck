@@ -6,6 +6,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    rake (13.4.2)
 
 PLATFORMS
   arm64-darwin-27
@@ -13,9 +14,11 @@ PLATFORMS
 
 DEPENDENCIES
   devcheck!
+  rake
 
 CHECKSUMS
   devcheck (0.1.7)
+  rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
 
 BUNDLED WITH
   4.0.20
