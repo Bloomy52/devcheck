@@ -28,8 +28,12 @@ def file(name)
 end
 
 def get_version
-  spec = Gem::Specification::load('devcheck.gemspec')
-  version = spec.version
+  spec = Gem.loaded_specs["devcheck"]
+  if spec.nil?
+    path = File.join(File.dirname(__FILE__), "devcheck.gemspec")
+    spec = Gem::Specification.load(path)
+  end
+  spec.version
 end
 
 def command_exists?(cmd)
