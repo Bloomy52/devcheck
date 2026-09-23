@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    devcheck (0.1.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  arm64-darwin-27
+  ruby
+
+DEPENDENCIES
+  devcheck!
+
+CHECKSUMS
+  devcheck (0.1.6)
+
+BUNDLED WITH
+  4.0.20
