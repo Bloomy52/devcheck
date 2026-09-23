@@ -11,8 +11,14 @@
 $failures = 0
 $commands = []
 $files = []
+$name = ""
 
+require 'rubygems'
 # Define Functions
+def name(name = "devcheck")
+  $name = name
+end
+
 def command(name)
   $commands << name
 end
@@ -21,6 +27,10 @@ def file(name)
   $files << name
 end
 
+def get_version
+  spec = Gem::Specification::load('devcheck.gemspec')
+  version = spec.version
+end
 
 def command_exists?(cmd)
   # On Windows, use 'where', on Unix-like systems use 'which'
@@ -53,9 +63,13 @@ rescue LoadError
   exit 1
 end
 
-# Main Function
 
-puts "devcheck"
+
+# Main Function
+version = get_version
+
+puts "devcheck v#{version}"
+puts "Environment Name: #{$name}"
 puts "Checking Development Environment"
 puts ""
 
