@@ -27,7 +27,7 @@ checks for commands and files.
 devcheck
 ```
 ```text
-devcheck v0.3.1
+devcheck v0.3.2
 Project Name: Go Choose Your License
 Project ID: go-choose-license
 
