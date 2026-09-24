@@ -47,9 +47,9 @@ def command_exists?(cmd)
   # Suppress output and check exit status
   system("#{checker} #{cmd} > /dev/null 2>&1")
   if $?.success?
-    puts "✓ #{cmd}"
+    puts "\e[32m✓ #{cmd}\e[0m"
   else
-    puts "✗ #{cmd}"
+    puts "\e[31m✗ #{cmd}\e[0m"
     $failures += 1
   end
 end
@@ -57,9 +57,9 @@ end
 
 def file_exists?(file)
   if File.exist?(file)
-    puts "✓ #{file}"
+    puts "\e[32m✓ #{file}\e[0m"
   else
-    puts "✗ #{file}"
+    puts "\e[31m✗ #{file}\e[0m"
     $failures += 1
   end
 end
