@@ -23,18 +23,23 @@ checks for commands and files.
 devcheck
 ```
 ```text
-devcheck
+devcheck v0.3.1
+Project Name: devcheck
+Project ID: devcheck
+
 Checking Development Environment
 
 ✓ ruby
 ✓ irb
 ✓ git
+✓ gem
 
 ✓ LICENSE
 ✓ README.md
 
 All checks passed!
 ```
+And there are even colors too! Green if you pass a check and red if a check is failed.
 
 ### Exit Codes
 This program uses exit codes to help indicate the status of the program.
@@ -46,12 +51,17 @@ As mentioned earlier, all you need is a `.devcheck.rb` file in your project dire
 configuration file is shown and explained below.
 
 ```ruby
+name "devcheck"
+id "devcheck"
+
 command "ruby"
 command "git"
 
 file "README.md"
 file "LICENSE"
 ```
+- `name "name"` refers to the project's display-name/whatever the project is called.
+- `id "name"` refers to the project's stable machine/repository-style identifier
 - `command "name"` refers to a specific command that might be run by the program or require you to have said command installed on your device.
 - `file "path"` refers to a specific file that might be required by the program or need to be present in the project directory for it to function properly. 
 
