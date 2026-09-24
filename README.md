@@ -24,18 +24,18 @@ devcheck
 ```
 ```text
 devcheck v0.3.1
-Project Name: devcheck
-Project ID: devcheck
+Project Name: Go Choose Your License
+Project ID: go-choose-license
 
 Checking Development Environment
 
-✓ ruby
-✓ irb
+✓ go
 ✓ git
-✓ gem
 
 ✓ LICENSE
 ✓ README.md
+✓ go.mod
+✓ main.go
 
 All checks passed!
 ```
@@ -51,14 +51,14 @@ As mentioned earlier, all you need is a `.devcheck.rb` file in your project dire
 configuration file is shown and explained below.
 
 ```ruby
-name "devcheck"
-id "devcheck"
+name "devcheck"  # Project Name
+id "devcheck"    # Project ID
 
-command "ruby"
-command "git"
+command "ruby"   # A command needed
+command "git"    # Another command needed
 
-file "README.md"
-file "LICENSE"
+file "README.md" # A file needed
+file "LICENSE"   # Another file needed
 ```
 - `name "name"` refers to the project's display-name/whatever the project is called.
 - `id "name"` refers to the project's stable machine/repository-style identifier
