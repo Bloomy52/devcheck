@@ -11,12 +11,16 @@
 $failures = 0
 $commands = []
 $files = []
-$name = ""
+$project_name = ""
+$project_id = ""
 
 require 'rubygems'
 # Define Functions
 def name(name = "devcheck")
-  $name = name
+  $project_name = name
+end
+def id(id = "devcheck")
+  $project_id = id
 end
 
 def command(name)
@@ -73,7 +77,9 @@ end
 version = get_version
 
 puts "devcheck v#{version}"
-puts "Environment Name: #{$name}"
+puts "Project Name: #{$project_name}"
+puts "Project ID: #{$project_id}"
+puts ""
 puts "Checking Development Environment"
 puts ""
 
