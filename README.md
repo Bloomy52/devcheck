@@ -6,6 +6,10 @@ are configured correctly for the project they are working on. `devcheck` provide
 an easy way to set up your development environment checking by just creating a `.devcheck.rb` file
 and populating it with the required commands and files needed for the project to function properly.
 
+What makes `devcheck` unique is its ability to be flexible. Unlike compiled development environment
+checkers, `devcheck` allows you to customize what commands and files to check for. You can also
+personalize your project's name and ID to show up when running `devcheck`. 
+
 ## Installation
 `devcheck` can be installed by running the `gem install devcheck` command from your terminal. 
 
