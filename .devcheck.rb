@@ -7,6 +7,7 @@
 # frozen_string_literal: true
 
 name "devcheck"
+id "devcheck"
 
 command "ruby"
 command "irb"
