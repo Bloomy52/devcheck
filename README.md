@@ -62,8 +62,8 @@ file "LICENSE"
 ```
 - `name "name"` refers to the project's display-name/whatever the project is called.
 - `id "name"` refers to the project's stable machine/repository-style identifier
-- `command "name"` refers to a specific command that might be run by the program or require you to have said command installed on your device.
-- `file "path"` refers to a specific file that might be required by the program or need to be present in the project directory for it to function properly. 
+- `command "name"` refers to a specific command that is required to be in your system's PATH variable.
+- `file "path"` refers to a specific file that is required by the program in the project directory for it to function properly. 
 
 ## Contributing
 We welcome contributions to the project and are so excited you have chosen to contribute!
@@ -78,4 +78,4 @@ To contribute, please follow these steps:
 Please ensure that your code follows the existing style and conventions of the project.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
