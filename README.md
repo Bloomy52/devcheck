@@ -29,9 +29,11 @@ Project ID: go-choose-license
 
 Checking Development Environment
 
+Commands:
 ✓ go
 ✓ git
 
+Files:
 ✓ LICENSE
 ✓ README.md
 ✓ go.mod
