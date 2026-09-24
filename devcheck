@@ -86,6 +86,7 @@ puts ""
 if $commands.empty?
   puts "No Commands Specified."
 else
+  puts "Commands:"
   $commands.each do |cmd|
     command_exists?(cmd)
   end
@@ -96,6 +97,7 @@ puts ""
 if $files.empty?
   puts "No Files Specified."
 else
+  puts "Files:"
   $files.each do |file|
     file_exists?(file)
   end
