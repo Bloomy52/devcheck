@@ -45,8 +45,8 @@ def command_exists?(cmd)
   checker = Gem.win_platform? ? 'where' : 'which'
 
   # Suppress output and check exit status
-  system("#{checker} #{cmd} > /dev/null 2>&1")
-  if $?.success?
+  #system("#{checker} #{cmd} > /dev/null 2>&1")
+  if system(checker, cmd, out: File::NULL, err: File::NULL )
     puts "\e[32m✓ #{cmd}\e[0m"
   else
     puts "\e[31m✗ #{cmd}\e[0m"
