@@ -13,9 +13,26 @@ $commands = []
 $files = []
 $project_name = ""
 $project_id = ""
+$environment = ""
+$argument = ""
 
 require 'rubygems'
 # Define Functions
+
+def get_argv
+  if ARGV.empty?
+    $argument = ""
+  else
+    $argument = ARGV[0]
+  end
+end
+
+def environment(environment = "")
+  $environment = environment
+  yield
+  $environment = ""
+end
+
 def name(name = "devcheck")
   $project_name = name
 end
@@ -24,11 +41,11 @@ def id(id = "devcheck")
 end
 
 def command(name)
-  $commands << name
+  $commands << [name, $environment]
 end
 
 def file(name)
-  $files << name
+  $files << [name, $environment]
 end
 
 def get_version
@@ -54,7 +71,6 @@ def command_exists?(cmd)
   end
 end
 
-
 def file_exists?(file)
   if File.exist?(file)
     puts "\e[32m✓ #{file}\e[0m"
@@ -74,6 +90,7 @@ end
 
 
 # Main Function
+get_argv
 version = get_version
 
 puts "devcheck v#{version}"
@@ -87,8 +104,10 @@ if $commands.empty?
   puts "No Commands Specified."
 else
   puts "Commands:"
-  $commands.each do |cmd|
-    command_exists?(cmd)
+  $commands.each do |cmd, env|
+    if env == $argument or env == "" or $argument == ""
+      command_exists?(cmd)
+    end
   end
 end
 
@@ -98,8 +117,10 @@ if $files.empty?
   puts "No Files Specified."
 else
   puts "Files:"
-  $files.each do |file|
-    file_exists?(file)
+  $files.each do |file, env|
+    if env == $argument or env == "" or $argument == ""
+      file_exists?(file)
+    end
   end
 end
 
