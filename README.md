@@ -70,7 +70,7 @@ And there are even colors too! Green if you pass a check and red if a check is f
 ### Environments
 Starting with `devcheck` version `0.4.0`, you can now add environments to check
 separate development environments. Check out an example of a `.devcheck.rb` file
-```text
+```ruby
 name "IsUnicodeText?"
 id "isunicodetext"
 
