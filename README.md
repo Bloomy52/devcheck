@@ -51,7 +51,7 @@ configuration information above. This program only checks for commands and files
 devcheck
 ```
 ```text
-devcheck v0.4.0
+devcheck v0.4.1
 Project Name: Go Choose Your License
 Project ID: go-choose-license
 
@@ -100,7 +100,8 @@ the checks for what is in the `vb` environment along with what is in the shared 
 ### Exit Codes
 This program uses exit codes to help indicate the status of the program.
 * `0`: All checks passed.
-* `1`: One or more checks failed or the `.devcheck.rb` file is missing.
+* `1`: One or more checks failed.
+* `2`: The `.devcheck.rb` file is missing.
 
 ## Releases
 
