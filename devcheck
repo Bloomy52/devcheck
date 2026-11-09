@@ -84,7 +84,7 @@ begin
   load ".devcheck.rb"
 rescue LoadError
   puts "No .devcheck.rb file found"
-  exit 1
+  exit 2
 end
 
 
