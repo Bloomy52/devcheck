@@ -1,6 +1,10 @@
 # devcheck
 A tool for checking development environments.
 
+[![Gem Version](https://badge.fury.io/rb/devcheck.svg)](https://rubygems.org/gems/devcheck)
+[![GitHub Release](https://img.shields.io/github/v/release/Bloomy52/devcheck)](https://github.com/Bloomy52/devcheck/releases/latest)
+
+
 `devcheck` is a command-line tool that helps developers ensure their development environments
 are configured correctly for the project they are working on. `devcheck` provides
 an easy way to set up your development environment checking by just creating a `.devcheck.rb` file
@@ -97,6 +101,17 @@ the checks for what is in the `vb` environment along with what is in the shared 
 This program uses exit codes to help indicate the status of the program.
 * `0`: All checks passed.
 * `1`: One or more checks failed or the `.devcheck.rb` file is missing.
+
+## Releases
+
+`devcheck` is distributed through [RubyGems](https://rubygems.org/gems/devcheck).
+
+For information about the latest release, previous versions, and
+changes between releases, visit the
+[GitHub Releases](https://github.com/Bloomy52/devcheck/releases) page.
+
+Releases are automatically published to RubyGems, with corresponding
+GitHub Releases providing version history and changelogs.
 
 ## Contributing
 We welcome contributions to the project and are so excited you have chosen to contribute!
